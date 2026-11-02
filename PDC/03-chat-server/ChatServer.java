@@ -14,7 +14,11 @@ public class ChatServer {
         while (true) {
             Socket socket = server.accept();
             ChatServerThread client = new ChatServerThread(socket);
-            clients.add(client);
+
+            synchronized (ChatServer.class) {
+                clients.add(client);
+            }
+
             client.start();
         }
     }
