@@ -31,17 +31,19 @@ Each experiment folder contains:
 | 09 | **Vector addition** with OpenMP | [`09-openmp-vector-addition/`](09-openmp-vector-addition/) | C + Java |
 | 10 | **Vector multiplication** with OpenMP | [`10-openmp-vector-multiplication/`](10-openmp-vector-multiplication/) | C + Java |
 | 11 | **Parallel reduction** (array sum) with OpenMP | [`11-openmp-reduction/`](11-openmp-reduction/) | C + Java |
+| 12 | **Vector addition** using MPI message passing | [`12-mpi-vector-addition/`](12-mpi-vector-addition/) | C |
 
 > Part 2 of the record covers **POSIX threads**, **OpenMP** and **MPI**. Every program
 > that had source code in the PDF is reproduced here in its native **C** form **and**
 > as a Java equivalent (`java.util.concurrent` / parallel streams) so you can compare
-> the two parallel-programming models side by side. MPI appears only as theory and
-> screenshots in the PDF, so no MPI source is included.
+> the two parallel-programming models side by side. Experiment 12 includes a simple
+> native C implementation using MPI scatter and gather.
 
 ## Prerequisites
 
 - **JDK 8+** (`javac`, `java`) for Part 1 and the Java equivalents.
 - **gcc** with OpenMP (`-fopenmp`) and pthreads (`-pthread`) for the C programs.
+- **Open MPI** (`mpicc`, `mpirun`) for experiment 12.
 - **MySQL/MariaDB** + the MySQL Connector/J driver for experiment 04.
 - **Apache Hadoop** for experiment 06.
 
